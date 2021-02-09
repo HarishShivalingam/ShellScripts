@@ -1,6 +1,6 @@
 echo "Hello World"
 firstline="Welcome to"
-secondline="/nDevOps"
+secondline=" DevOps"
 clourred="\e[31m"
 clolorgreen="\e[32m"
 clolorreset="\e[0m"
