@@ -29,4 +29,9 @@ echo "# = $#"
 # Ex: Bash/Shell Terminal for input (>_) and mysql terminal for output (<_)
 # (>) or (1>) gives standard out
 # (2>) gives error out put ex: >>
+#if std out put and error to same file the use (&>)
+#EX: ls -l sample.txt null.sh >/tmp/out 2>/tmp/err
+#if no output needed for reference the use &>/dev/null
 
+#Exit status
+#o is universal success and 1 to 255 is failure
