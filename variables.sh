@@ -9,3 +9,10 @@ add=$((2+5+123))
 echo add = $add
 #Variables should not start with number
 #Variables by default no data type
+
+#read and convert to variable give it seprately after colon
+
+read -p 'Enter your name:' name
+read -p 'Enter your age:' age
+
+echo -e "\n your name is name \n your age is age"
