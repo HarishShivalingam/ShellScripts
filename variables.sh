@@ -27,3 +27,6 @@ echo "# = $#"
 
 #Redirectors
 # Ex: Bash/Shell Terminal for input (>_) and mysql terminal for output (<_)
+# (>) or (1>) gives standard out
+# (2>) gives error out put ex: >>
+
