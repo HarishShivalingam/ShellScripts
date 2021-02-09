@@ -24,3 +24,6 @@ echo 2 = $2
 echo "* = $*"
 echo "@ = $@"
 echo "# = $#"
+
+#Redirectors
+# Ex: Bash/Shell Terminal for input (>_) and mysql terminal for output (<_)
