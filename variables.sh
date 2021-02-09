@@ -19,8 +19,8 @@ echo -e "\n your name is $name \n your age is $age"
 #Special variables
 
 echo 0 = $0
-echo 1 =
-echo 2 =
+echo 1 = $1
+echo 2 = $2
 echo "* = $*"
 echo "@ = $@"
 echo "# = $#"
