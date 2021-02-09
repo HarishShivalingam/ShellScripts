@@ -1,6 +1,4 @@
 echo "Hello World"
-echo "Second 2nd line"
-
 firstline="Welcome to"
 secondline="DevOps"
 clourred="\e[31m"
