@@ -1,5 +1,7 @@
 cart:
-    @sh-component/cart.sh
+	@sh component/cart.sh
 
 catalogue:
-    @sh-component/catalogue.sh
+	@sh component/catalogue.sh
+frontend:
+	@sh component/frontend.sh
