@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Welcome to cart
+sh component/$1.sh
