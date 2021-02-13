@@ -8,6 +8,6 @@ if [ "$USER_ID" -ne 0 ]; then
 fi
 
 print() {
-  echo -e "\e]1m$(date +c%) \e[35m$(hostname) \e\1;36m$(COMPONENT) :: $1"
+  echo -e "\e]1m$(date +c%) \e[35m$(hostname) \e\1;36m${COMPONENT} :: $1"
 
   }
