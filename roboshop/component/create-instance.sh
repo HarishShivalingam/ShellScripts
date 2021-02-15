@@ -7,4 +7,4 @@ if [ -z "${component}" ]; then
   exit 1
 fi
 
-aws ec2 run-instances --launch-template LaunchTemplateId=lt-08b96a82c41b602dd --tag-specifications "ResourceType=instance,Tags=[{key=Name,Value=${component}}]"
+aws ec2 run-instances --launch-template LaunchTemplateId=lt-08b96a82c41b602dd --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${component}}]"
