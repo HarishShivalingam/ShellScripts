@@ -10,6 +10,7 @@ stat $?
 print "Starting Nginx" "systemctl start nginx"
 #systemctl enable nginx
 #systemctl start nginx
+stat $?
 exit
 
 print "importing source code to the target"
