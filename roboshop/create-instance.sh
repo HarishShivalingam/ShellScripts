@@ -9,7 +9,7 @@ fi
 
 STATE=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${component}" --query 'Reservations[*].Instances[*].State.Name' --output text)
 #STATE= $(aws ec2 describe-instances --filters "Name=tag:Name,Values=${component}" --query 'Reservations[*].Instances[*].State.Name' --output text)
-if [ STATE != "running" ]; then
+if [ $STATE != "running" ]; then
   aws ec2 run-instances --launch-template LaunchTemplateId=lt-08b96a82c41b602dd --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${component}}]"
 fi
 
