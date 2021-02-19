@@ -17,7 +17,7 @@ print "Installing mongodb" "yum install -y mongodb-org"
 yum install -y mongodb-org
 
 print "Update mongodb conf" "sed"
-sed -i -e 's/127.0.0.0/' /etc/mongod.conf
+sed -i -e 's/127.0.0.1/0.0.0.0' /etc/mongod.conf
 stat $?
 
 print "Start MongoDB Service" "systemctl restart mongod"
@@ -32,22 +32,19 @@ curl -s -L -o /tmp/mongodb.zip "https://dev.azure.com/DevOps-Batches/f635c088-10
 stat $?
 
 print "Load Schema" ""
-cd /tmp
-unzip mongodb. && mongo < catalogue.js && mongo < users.js
+cd /tmp && unzip mongodb. && mongo < catalogue.js && mongo < users.js
 stat $?
-
-
 
 #Update Liste IP address from 127.0.0.1 to 0.0.0.0 in config file
 
 #then restart the service
 
-/etc/mongod.conf
+#/etc/mongod.conf
 
 
-systemctl restart mongod
+#systemctl restart mongod
 
-curl -s -L -o /tmp/mongodb.zip "https://dev.azure.com/DevOps-Batches/f635c088-1047-40e8-8c29-2e3b05a38010/_apis/git/repositories/03f2af34-e227-44b8-a9f2-c26720b34942/items?path=%2F&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=zip&api-version=5.0&download=true"
+#curl -s -L -o /tmp/mongodb.zip "https://dev.azure.com/DevOps-Batches/f635c088-1047-40e8-8c29-2e3b05a38010/_apis/git/repositories/03f2af34-e227-44b8-a9f2-c26720b34942/items?path=%2F&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=zip&api-version=5.0&download=true"
 
 # cd /tmp
 # unzip mongodb.zip
