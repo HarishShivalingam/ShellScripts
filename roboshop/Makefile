@@ -6,4 +6,5 @@ frontend: common ## Install frontend
 	@sh component/frontend.sh
 cart: common  ## Install cart
 	@sh component/cart.sh
+mongodb: common ## Install mongodb
 
