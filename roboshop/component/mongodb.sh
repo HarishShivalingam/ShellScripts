@@ -34,7 +34,7 @@ curl -s -L -o /tmp/mongodb.zip "https://dev.azure.com/DevOps-Batches/f635c088-10
 stat $?
 
 print "Load Schema" ""
-cd /tmp && unzip mongodb. && mongo < catalogue.js && mongo < users.js
+cd /tmp && unzip mongodb.zip && mongo < catalogue.js && mongo < users.js
 stat $?
 
 #Update Liste IP address from 127.0.0.1 to 0.0.0.0 in config file
