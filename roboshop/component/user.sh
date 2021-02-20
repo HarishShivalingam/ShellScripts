@@ -26,7 +26,7 @@ npm install  --unsafe-perm && chown roboshop:roboshop /home/roboshop -R
 stat $?
 
 print "updating the IP address of MONGODB Server in systemd.service file" "sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service"
-sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service
+sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' -e 's/REDIS_ENDPOINT/redis.devops2021.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service
 stat $?
 
 print "Start user Service" "systemctl daemon-reload && systemctl start user && systemctl enable user"
