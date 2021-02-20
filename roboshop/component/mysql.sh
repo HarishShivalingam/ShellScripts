@@ -29,13 +29,13 @@ stat $?
 
 echo "show databases;" | mysql -uroot -ppassword &>/dev/null
 if [ $? -ne 0 ]; then
-print "Reset MySql password"
-mysql --connect-expired-password -uroot -p"${DEFAULT_PASSWORD}" <<EOF
-ALTER USER 'root'@'localhost' IDENTIFIED by 'Default_Roboshop*999';
-uninstall plugin validate_password;
-ALTER USER 'root'@'localhost' IDENTIFIED by 'password';
+  print "Reset MySql password" ""
+  mysql --connect-expired-password -uroot -p"${DEFAULT_PASSWORD}" <<EOF
+  ALTER USER 'root'@'localhost' IDENTIFIED by 'Default_Roboshop*999';
+  uninstall plugin validate_password;
+  ALTER USER 'root'@'localhost' IDENTIFIED by 'password';
 EOF
-stat $?
+  stat $?
 fi
 
 
