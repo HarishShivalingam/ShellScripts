@@ -30,8 +30,9 @@ sed -i -e "s/MONGO_DNSNAME/mongodb.devops2021.tk/" /home/roboshop/catalogue/syst
 stat $?
 
 print "Start Catalogue Service" "systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue"
-systemctl daemon-reload
-systemctl start catalogue
-systemctl enable catalogue
-stat $?
+systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue
+#systemctl daemon-reload
+#systemctl start catalogue
+#systemctl enable catalogue
+#stat $?
 
