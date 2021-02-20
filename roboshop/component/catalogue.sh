@@ -20,10 +20,10 @@ mkdir catalogue
 cd catalogue
 unzip /tmp/catalogue.zip
 
-print "Install NodeJS dependencies" "npm install"
+print "Install NodeJS dependencies" "npm install && npm install  --unsafe-perm && exit"
 npm install  --unsafe-perm
-stat $?
 exit
+stat $?
 
 print " updating the IP address of MONGODB Server in systemd.service file" ""
 sed -i -e "s/MONGO_DNSNAME/mongodb.devops2021.tk/" /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
