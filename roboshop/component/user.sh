@@ -21,8 +21,8 @@ print "user creation"  "/home/roboshop/user/systemd.service && mv /home/roboshop
 rm -rf /home/roboshop/user user  && mkdir -p /home/roboshop/user && cd /home/roboshop/user && unzip /tmp/user.zip
 stat $?
 
-print "Install NodeJS dependencies" "npm install && npm install  --unsafe-perm && exit"
-npm install  --unsafe-perm
+print "Install NodeJS dependencies" "npm install && npm install  --unsafe-perm && chown roboshop:roboshop /home/roboshop -R"
+npm install  --unsafe-perm && chown roboshop:roboshop /home/roboshop -R
 stat $?
 
 print "updating the IP address of MONGODB Server in systemd.service file" "sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service"
