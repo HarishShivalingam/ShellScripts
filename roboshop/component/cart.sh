@@ -27,7 +27,7 @@ stat $?
 print "updating the IP address of MONGODB Server in systemd.service file" "sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' /home/roboshop/cart/systemd.service && mv /home/roboshop/cart/systemd.service /etc/systemd/system/cart.service"
 sed -i -e 's/MONGO_ENDPOINT/mongodb.devops2021.tk/' /home/roboshop/cart/systemd.service && mv /home/roboshop/cart/systemd.service /etc/systemd/system/cart.service
 stat $?
-
+sed -i -e 's/REDIS_ENDPOINT/redis.devops2021.tk/' -e 's/CATALOGUE_ENDPOINT/redis.devops2021.tk/'
 print "Start cart Service" "systemctl daemon-reload && systemctl start cart && systemctl enable cart"
 systemctl daemon-reload && systemctl start cart && systemctl enable cart
 stat $?
