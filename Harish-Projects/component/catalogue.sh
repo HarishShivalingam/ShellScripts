@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Welcome to catalogue
+echo Welcome to cart

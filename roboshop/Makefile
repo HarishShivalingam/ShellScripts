@@ -8,6 +8,6 @@ cart: common  ## Install cart
 	@sh component/cart.sh
 mongodb: common ## Install mongodb
 	@sh component/mongodb.sh
-catalogue: common ## Install catalogue
-	@sh component/catalogue.sh
+cart: common ## Install cart
+	@sh component/cart.sh
 
