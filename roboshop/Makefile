@@ -11,3 +11,7 @@ mongodb: common ## Install mongodb
 cart: common ## Install cart
 	@sh component/cart.sh
 
+redis: common ## Install redis
+	@sh component/redis.sh
+user: common ##Install user
+	@sh component/user.sh
