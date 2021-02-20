@@ -24,7 +24,7 @@ npm install  --unsafe-perm && exit
 stat $?
 
 print "updating the IP address of MONGODB Server in systemd.service file" "sed -i -e "s/MONGO_DNSNAME/mongodb.devops2021.tk/" /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service"
-sed -i -e "s/MONGO_DNSNAME/mongodb.devops2021.tk/" /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 stat $?
 
 print "Start Catalogue Service" "systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue"
