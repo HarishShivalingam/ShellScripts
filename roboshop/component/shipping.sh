@@ -19,6 +19,13 @@ stat $?
 print "Maven compile code" "mvn clean package && mv target/shipping-1.0.jar shipping.jar"
 mvn clean package && mv target/shipping-1.0.jar shipping.jar
 
+print "updating systemD for shipping" "sed -i -e 's/MONGO_DNSNAME/mongodb.devops2021.tk/' /home/roboshop/shipping/systemd.service && mv /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service"
+sed -i -e 's/CART_ENDPOINT/cart.devops2021.tk/' -e 's/DBHOST/mongodb.devops2021.tk/'  /home/roboshop/shipping/systemd.service  && mv /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service
+stat $?
+
+print "Start shipping Service" "systemctl daemon-reload && systemctl start shipping && systemctl enable shipping"
+systemctl daemon-reload && systemctl start shipping && systemctl enable shipping
+stat $?
 print "Copy the service file and start the service" ""
 cp /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service
 systemctl daemon-reload
