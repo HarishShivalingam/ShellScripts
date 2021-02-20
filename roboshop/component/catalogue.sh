@@ -32,4 +32,5 @@ print "Start Catalogue Service" "systemctl daemon-reload && systemctl start cata
 systemctl daemon-reload
 systemctl start catalogue
 systemctl enable catalogue
+stat $?
 
