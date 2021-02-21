@@ -26,6 +26,9 @@ stat $?
 print "Start shipping Service" "systemctl daemon-reload && systemctl start shipping && systemctl enable shipping"
 systemctl daemon-reload && systemctl start shipping && systemctl enable shipping
 stat $?
+
+chown roboshop:roboshop /home/roboshop - R
+
 print "Copy the service file and start the service" ""
 cp /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service
 systemctl daemon-reload
